@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skyoak_stick"
+    },
+    "P": {
+        "item":"tmon:celestial_pearl"
+    }
+  },
+  "result": {
+    "item": "tmon:celestial_staff"
+  }
+}

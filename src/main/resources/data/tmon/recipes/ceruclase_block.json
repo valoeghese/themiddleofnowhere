@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:ceruclase"
+    }
+  },
+  "result": {
+    "item": "tmon:ceruclase_block"
+  }
+}

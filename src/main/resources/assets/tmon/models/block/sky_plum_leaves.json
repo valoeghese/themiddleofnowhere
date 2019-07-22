@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "tmon:block/sky_plum_leaves"
+    }
+}

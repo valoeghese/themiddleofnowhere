@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skyoak_stick"
+    },
+    "X": {
+      "item": "tmon:skystone"
+    }
+  },
+  "result": {
+    "item": "tmon:skystone_sword"
+  }
+}

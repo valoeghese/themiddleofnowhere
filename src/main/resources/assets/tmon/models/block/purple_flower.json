@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "particle": "tmon:block/purple_flower",
+        "cross": "tmon:block/purple_flower"
+    }
+}

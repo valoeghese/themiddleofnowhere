@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "tmon:block/skyoak_planks",
+    "top": "tmon:block/skyoak_planks",
+    "side": "tmon:block/skyoak_planks"
+  }
+}

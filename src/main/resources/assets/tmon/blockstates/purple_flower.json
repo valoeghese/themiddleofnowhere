@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "tmon:block/purple_flower"
+            },
+            {
+                "model": "tmon:block/purple_flower",
+                "y": 90
+            },
+            {
+                "model": "tmon:block/purple_flower",
+                "y": 180
+            },
+            {
+                "model": "tmon:block/purple_flower",
+                "y": 270
+            }
+        ]
+    }
+}

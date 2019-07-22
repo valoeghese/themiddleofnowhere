@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skyoak_stick"
+    },
+    "W": {
+      "item": "tmon:skyoak_planks"
+    }
+  },
+  "result": {
+    "item": "tmon:skyoak_fence",
+    "count": 3
+  }
+}

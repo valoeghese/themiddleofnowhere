@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skyoak_stick"
+    },
+    "X": {
+      "item": "tmon:ceruclase"
+    }
+  },
+  "result": {
+    "item": "tmon:ceruclase_hoe"
+  }
+}

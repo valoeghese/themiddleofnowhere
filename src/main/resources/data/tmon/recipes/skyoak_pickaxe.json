@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skyoak_stick"
+    },
+    "X": {
+      "item": "tmon:skyoak_planks"
+    }
+  },
+  "result": {
+    "item": "tmon:skyoak_pickaxe"
+  }
+}

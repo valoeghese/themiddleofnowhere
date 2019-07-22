@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "tmon:block/sky_plum_log_top",
+        "side": "tmon:block/sky_plum_log_side"
+    }
+}

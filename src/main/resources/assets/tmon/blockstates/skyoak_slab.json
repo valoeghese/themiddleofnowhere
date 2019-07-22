@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tmon:block/skyoak_slab"
+    },
+    "type=double": {
+      "model": "tmon:block/skyoak_planks"
+    },
+    "type=top": {
+      "model": "tmon:block/skyoak_slab_top"
+    }
+  }
+}

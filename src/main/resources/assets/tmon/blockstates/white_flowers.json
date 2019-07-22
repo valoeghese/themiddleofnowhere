@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "tmon:block/white_flowers"
+            },
+            {
+                "model": "tmon:block/white_flowers",
+                "y": 90
+            },
+            {
+                "model": "tmon:block/white_flowers",
+                "y": 180
+            },
+            {
+                "model": "tmon:block/white_flowers",
+                "y": 270
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "tmon:block/sky_plum_log" },
+        "axis=z":   { "model": "tmon:block/sky_plum_log", "x": 90 },
+        "axis=x":   { "model": "tmon:block/sky_plum_log", "x": 90, "y": 90 }
+    }
+}

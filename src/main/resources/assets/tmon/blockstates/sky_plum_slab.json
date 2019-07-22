@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tmon:block/sky_plum_slab"
+    },
+    "type=double": {
+      "model": "tmon:block/sky_plum_planks"
+    },
+    "type=top": {
+      "model": "tmon:block/sky_plum_slab_top"
+    }
+  }
+}

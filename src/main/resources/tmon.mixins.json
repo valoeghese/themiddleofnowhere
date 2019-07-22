@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "tmon.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinPortalForcer",
+    "MixinDimensionType",
+    "MixinCraftingTableContainer"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

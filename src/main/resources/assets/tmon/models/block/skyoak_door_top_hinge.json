@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "bottom": "tmon:block/skyoak_door_bottom",
+    "top": "tmon:block/skyoak_door_top"
+  }
+}

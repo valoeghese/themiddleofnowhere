@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "C#C",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:chiseled_skystone"
+    },
+    "C": {
+      "item": "tmon:ceruclase"
+    },
+    "P": {
+      "item": "tmon:celestial_pearl"
+    }
+  },
+  "result": {
+    "item": "tmon:altar"
+  }
+}

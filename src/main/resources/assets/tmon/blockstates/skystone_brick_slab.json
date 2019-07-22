@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tmon:block/skystone_brick_slab"
+    },
+    "type=double": {
+      "model": "tmon:block/skystone_bricks"
+    },
+    "type=top": {
+      "model": "tmon:block/skystone_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "W",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:skystone"
+    },
+    "W": {
+      "item": "tmon:skyoak_water_bucket"
+    }
+  },
+  "result": {
+    "item": "tmon:chiseled_skystone"
+  }
+}

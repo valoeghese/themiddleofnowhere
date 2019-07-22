@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "tmon:block/skyoak_log_top",
+        "side": "tmon:block/skyoak_log_side"
+    }
+}

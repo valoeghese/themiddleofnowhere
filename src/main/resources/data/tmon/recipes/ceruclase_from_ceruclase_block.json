@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ceruclase",
+  "ingredients": [
+    {
+      "item": "tmon:ceruclase_block"
+    }
+  ],
+  "result": {
+    "item": "tmon:ceruclase",
+    "count": 9
+  }
+}
