@@ -12,8 +12,8 @@ public enum AddWoodlandsLayer implements CrossSamplingLayer {
 	public static final int OAK_WOODLANDS = Registry.BIOME.getRawId(TMoN.SKY_OAK_WOODLANDS_BIOME);
 
 	@Override
-	public int sample(LayerRandomnessSource random, int center, int var3, int var4, int var5, int var6) {
-		if (center == FOREST && var3 == FOREST && var4 == FOREST && var5 == FOREST && var6 == FOREST) {
+	public int sample(LayerRandomnessSource random, int center, int biome1, int biome2, int biome3, int biome4) {
+		if (center == FOREST && biome1 == FOREST && biome2 == FOREST && biome3 == FOREST && biome4 == FOREST) {
 			return random.nextInt(8) == 0 ? OAK_WOODLANDS : center;
 		}
 		return center;

@@ -124,7 +124,7 @@ public class TMoNInitializer implements ModInitializer {
 
 		TMoN.ALTAR = registerWithItem("altar", new AltarBlock(skystone));
 
-		TMoN.WHITE_FLOWERS = registerWithItem("tall_sky_grass", new WhiteFlowersBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).build()));
+		TMoN.WHITE_FLOWERS = registerWithItem("white_flowers", new WhiteFlowersBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).build()));
 		TMoN.PURPLE_FLOWER = registerWithItem("purple_flower", new SkylandsPlantBlock(FabricBlockSettings.of(Material.PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).build()));
 
 		TMoN.SKYROOT_STICK = register("skyoak_stick", new Item(createItemSettings()));
