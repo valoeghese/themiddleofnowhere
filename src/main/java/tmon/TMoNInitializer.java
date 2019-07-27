@@ -249,19 +249,6 @@ public class TMoNInitializer implements ModInitializer {
 				SkyFeatures.addLakes(biome);
 			});
 		}));
-		TMoN.SKY_OAK_WOODLANDS_BIOME = register("sky_oak_woodlands", TMoNBiome.create(builder -> {
-			builder.configureSurfaceBuilder(TMoN.SKY_SURFACE_BUILDER, TMoN.SKYGRASS_SURFACE_CONFIG);
-			builder.depth(0F);
-			setDefaultSettings(builder);
-			builder.parent("sky_forest");
-
-			builder.apply(biome -> {
-				SkyFeatures.addSkyOres(biome);
-
-				SkyFeatures.addWoodlandsVegetation(biome);
-				SkyFeatures.addLakes(biome);
-			});
-		}));
 		TMoN.LAKES_ISLES_BIOME = register("lakes_islands", TMoNBiome.create(builder -> {
 			builder.configureSurfaceBuilder(TMoN.SKY_SURFACE_BUILDER, TMoN.SKYGRASS_SURFACE_CONFIG);
 			builder.depth(0F);

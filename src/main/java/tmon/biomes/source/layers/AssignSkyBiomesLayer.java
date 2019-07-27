@@ -20,6 +20,7 @@ public enum AssignSkyBiomesLayer implements IdentitySamplingLayer {
 		list.add(Registry.BIOME.getRawId(TMoN.ROCKY_ISLES_BIOME));
 	});
 
+	@Override
 	public int sample(LayerRandomnessSource random, int value) {
 		switch (value) {
 		case 1:

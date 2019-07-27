@@ -17,10 +17,12 @@ public class AltarBlock extends Block implements BlockEntityProvider {
 		super(settings);
 	}
 
+	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ctx) {
 		return SHAPE;
 	}
 
+	@Override
 	public boolean hasSidedTransparency(BlockState state) {
 		return true;
 	}

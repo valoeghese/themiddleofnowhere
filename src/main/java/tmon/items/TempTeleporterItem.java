@@ -17,6 +17,7 @@ public class TempTeleporterItem extends Item {
 		super(settings);
 	}
 
+	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getStackInHand(hand);
 
@@ -27,6 +28,6 @@ public class TempTeleporterItem extends Item {
 					.executeSync(() -> serverPlayer.changeDimension(serverPlayer.dimension == TMoN.SKY_DIMENSION ? DimensionType.OVERWORLD : TMoN.SKY_DIMENSION));
 		}
 
-		return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, stack);
+		return new TypedActionResult<>(ActionResult.SUCCESS, stack);
 	}
 }

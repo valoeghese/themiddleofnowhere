@@ -23,6 +23,7 @@ public class SkyBushFeature extends SkylandsTreeFeature {
 		this.leaves = leaves;
 	}
 
+	@Override
 	public boolean generate(Set<BlockPos> set, ModifiableTestableWorld world, Random random, BlockPos pos, MutableIntBoundingBox bbox) {
 		pos = world.getTopPosition(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, pos).down();
 		if (isNaturalDirtOrGrass(world, pos)) {

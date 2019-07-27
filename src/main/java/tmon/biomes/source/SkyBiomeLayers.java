@@ -14,7 +14,6 @@ import net.minecraft.world.biome.layer.LayerSampler;
 import net.minecraft.world.biome.layer.ScaleLayer;
 import net.minecraft.world.level.LevelGeneratorType;
 import tmon.biomes.source.layers.AddSubbiomesLayer;
-import tmon.biomes.source.layers.AddWoodlandsLayer;
 import tmon.biomes.source.layers.AssignSkyBiomesLayer;
 import tmon.biomes.source.layers.SkyInitLayer;
 import tmon.dimension.generator.SkyChunkGeneratorConfig;
@@ -45,7 +44,6 @@ public class SkyBiomeLayers {
 		biomes = ScaleLayer.FUZZY.create(context.apply(11), biomes);
 
 		biomes = AssignSkyBiomesLayer.INSTANCE.create(context.apply(1L), biomes);
-		biomes = AddWoodlandsLayer.INSTANCE.create(context.apply(3L), biomes);
 
 		biomes = ScaleLayer.NORMAL.create(context.apply(10), biomes);
 

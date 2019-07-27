@@ -17,6 +17,7 @@ public class SkylandsPlantBlock extends PlantBlock {
 		super(settings);
 	}
 
+	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, EntityContext ctx) {
 		Vec3d offset = state.getOffsetPos(view, pos);
 		return SHAPE.offset(offset.x, offset.y, offset.z);

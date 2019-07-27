@@ -117,7 +117,6 @@ public class TMoN {
 	public static Biome SKY_FOREST_BIOME;
 	public static Biome ROCKY_ISLES_BIOME;
 	public static Biome SKY_PLUM_GROOVE_BIOME;
-	public static Biome SKY_OAK_WOODLANDS_BIOME;
 	public static Biome LAKES_ISLES_BIOME;
 	
 	public static BiomeSourceType<?, ?> SKY_BIOME_SOURCE_TYPE;

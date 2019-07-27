@@ -28,8 +28,8 @@ public abstract class MixinCraftingTableContainer {
 	}
 
 	private static boolean canUse2(BlockContext blockContext_1, PlayerEntity playerEntity_1, Block block_1) {
-		return (Boolean) blockContext_1.run((world_1, blockPos_1) -> {
-			return world_1.getBlockState(blockPos_1).getBlock() != block_1 ? false : playerEntity_1.squaredDistanceTo((double) blockPos_1.getX() + 0.5D, (double) blockPos_1.getY() + 0.5D, (double) blockPos_1.getZ() + 0.5D) <= 64.0D;
+		return blockContext_1.run((world_1, blockPos_1) -> {
+			return world_1.getBlockState(blockPos_1).getBlock() != block_1 ? false : playerEntity_1.squaredDistanceTo(blockPos_1.getX() + 0.5D, blockPos_1.getY() + 0.5D, blockPos_1.getZ() + 0.5D) <= 64.0D;
 		}, true);
 	}
 }

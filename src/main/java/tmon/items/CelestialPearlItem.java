@@ -16,6 +16,7 @@ public class CelestialPearlItem extends Item {
 		super(settings);
 	}
 
+	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getStackInHand(hand);
 		if (!player.abilities.creativeMode) {

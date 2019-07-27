@@ -17,6 +17,7 @@ public class SkystoneOreFeatureConfig implements FeatureConfig {
 		this.state = state;
 	}
 
+	@Override
 	public <T> Dynamic<T> serialize(DynamicOps<T> ops) {
 		return new Dynamic<>(ops, ops.createMap(ImmutableMap.of(ops.createString("size"), ops.createInt(this.size),
 				ops.createString("state"), BlockState.serialize(ops, this.state).getValue())));

@@ -31,18 +31,22 @@ public class SkyBiomeSource extends BiomeSource {
 		this.biomeLayer = layers[1];
 	}
 
+	@Override
 	public Biome getBiome(int x, int z) {
 		return this.biomeLayer.sample(x, z);
 	}
 
+	@Override
 	public Biome getBiomeForNoiseGen(int x, int z) {
 		return this.noiseLayer.sample(x, z);
 	}
 
+	@Override
 	public Biome[] sampleBiomes(int x, int z, int xSize, int zSize, boolean unknown) {
 		return this.biomeLayer.sample(x, z, xSize, zSize);
 	}
 
+	@Override
 	public Set<Biome> getBiomesInArea(int x, int z, int radius) {
 		int minX = x - radius >> 2;
 		int minZ = z - radius >> 2;
@@ -55,6 +59,7 @@ public class SkyBiomeSource extends BiomeSource {
 		return set;
 	}
 
+	@Override
 	public BlockPos locateBiome(int x, int z, int radius, List<Biome> biomes, Random random) {
 		int minX = x - radius >> 2;
 		int minZ = z - radius >> 2;
@@ -80,6 +85,7 @@ public class SkyBiomeSource extends BiomeSource {
 		return pos;
 	}
 
+	@Override
 	public boolean hasStructureFeature(StructureFeature<?> structure) {
 		return this.structureFeatures.computeIfAbsent(structure, s -> {
 			Biome[] biomes = this.biomes;
@@ -96,6 +102,7 @@ public class SkyBiomeSource extends BiomeSource {
 		});
 	}
 
+	@Override
 	public Set<BlockState> getTopMaterials() {
 		if (this.topMaterials.isEmpty()) {
 			Biome[] biomes = this.biomes;

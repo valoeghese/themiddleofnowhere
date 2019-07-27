@@ -6,6 +6,7 @@ import net.minecraft.world.biome.layer.LayerRandomnessSource;
 public enum SkyInitLayer implements InitLayer {
 	INSTANCE;
 
+	@Override
 	public int sample(LayerRandomnessSource random, int x, int z) {
 		if (x == 0 && z == 0) {
 			return 1;

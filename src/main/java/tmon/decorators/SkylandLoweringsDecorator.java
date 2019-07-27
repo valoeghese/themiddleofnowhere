@@ -19,6 +19,7 @@ public class SkylandLoweringsDecorator extends Decorator<SkylandLoweringsDecorat
 		super(deserialize);
 	}
 
+	@Override
 	public Stream<BlockPos> getPositions(IWorld world, ChunkGenerator<? extends ChunkGeneratorConfig> generator, Random random, SkylandLoweringsDecoratorConfig config, BlockPos pos) {
 		int count = config.count;
 		if (random.nextFloat() < config.extraChance) {

@@ -36,6 +36,7 @@ public abstract class SkylandsTreeFeature extends AbstractTreeFeature<DefaultFea
 		});
 	}
 
+	@Override
 	protected void setToDirt(ModifiableTestableWorld world, BlockPos pos) {
 		if (!isNaturalDirt(world, pos)) {
 			this.setBlockState(world, pos, TMoN.SKY_DIRT.getDefaultState());

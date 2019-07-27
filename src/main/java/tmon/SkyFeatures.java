@@ -32,10 +32,10 @@ public class SkyFeatures {
 				Biome.configureFeature(Feature.RANDOM_SELECTOR,
 						new RandomFeatureConfig(
 								new Feature[] { TMoN.SKY_PLUM_FEATURE, TMoN.LARGE_SKYOAK_FEATURE },
-								new FeatureConfig[] { DefaultFeatureConfig.DEFAULT, DefaultFeatureConfig.DEFAULT },
+								new FeatureConfig[] { FeatureConfig.DEFAULT, FeatureConfig.DEFAULT },
 								new float[] { 0.15f, 0.1f },
 								TMoN.SKYOAK_FEATURE,
-								DefaultFeatureConfig.DEFAULT),
+								FeatureConfig.DEFAULT),
 						Decorator.COUNT_EXTRA_HEIGHTMAP,
 						new CountExtraChanceDecoratorConfig(5, 0.1F, 1)));
 
@@ -53,41 +53,16 @@ public class SkyFeatures {
 						new CountDecoratorConfig(5)));
 	}
 	
-	public static void addWoodlandsVegetation(Biome biome) {
-		biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
-				Biome.configureFeature(Feature.RANDOM_SELECTOR,
-						new RandomFeatureConfig(
-								new Feature[] { TMoN.LARGE_SKYOAK_FEATURE, TMoN.SKYOAK_BUSH_FEATURE },
-								new FeatureConfig[] { DefaultFeatureConfig.DEFAULT, DefaultFeatureConfig.DEFAULT },
-								new float[] { 0.8f, 0.15f },
-								TMoN.SKYOAK_FEATURE,
-								DefaultFeatureConfig.DEFAULT),
-						Decorator.COUNT_EXTRA_HEIGHTMAP,
-						new CountExtraChanceDecoratorConfig(5, 0.1F, 1)));
-
-		addLoweringsBushes(biome);
-
-		biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
-				Biome.configureFeature(Feature.BUSH,
-						new BushFeatureConfig(TMoN.WHITE_FLOWERS.getDefaultState()),
-						Decorator.COUNT_HEIGHTMAP_32,
-						new CountDecoratorConfig(7)));
-		biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
-				Biome.configureFeature(Feature.BUSH,
-						new BushFeatureConfig(TMoN.PURPLE_FLOWER.getDefaultState()),
-						Decorator.COUNT_HEIGHTMAP_32,
-						new CountDecoratorConfig(5)));
-	}
 
 	public static void addRockyIslesVegetation(Biome biome) {
 		biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
 				Biome.configureFeature(Feature.RANDOM_SELECTOR,
 						new RandomFeatureConfig(
 								new Feature[] { TMoN.SKYOAK_BUSH_FEATURE, TMoN.SKY_PLUM_FEATURE, TMoN.LARGE_SKYOAK_FEATURE },
-								new FeatureConfig[] { DefaultFeatureConfig.DEFAULT, DefaultFeatureConfig.DEFAULT, DefaultFeatureConfig.DEFAULT },
+								new FeatureConfig[] { FeatureConfig.DEFAULT, FeatureConfig.DEFAULT, FeatureConfig.DEFAULT },
 								new float[] { 0.1f, 0.05f, 0.05f },
 								TMoN.SKYOAK_FEATURE,
-								DefaultFeatureConfig.DEFAULT),
+								FeatureConfig.DEFAULT),
 						Decorator.COUNT_EXTRA_HEIGHTMAP,
 						new CountExtraChanceDecoratorConfig(5, 0.1F, 3)));
 
@@ -116,7 +91,7 @@ public class SkyFeatures {
 	public static void addSkyPlumGrooveVegetation(Biome biome) {
 		biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION,
 				Biome.configureFeature(TMoN.SKY_PLUM_BUSH_FEATURE,
-						DefaultFeatureConfig.DEFAULT,
+						FeatureConfig.DEFAULT,
 						TMoN.SKYLAND_LOWERINGS_DECORATOR,
 						new SkylandLoweringsDecoratorConfig(3, 0.1F, 1)));
 
@@ -124,10 +99,10 @@ public class SkyFeatures {
 				Biome.configureFeature(Feature.RANDOM_SELECTOR,
 						new RandomFeatureConfig(
 								new Feature[] { TMoN.SKY_PLUM_BUSH_FEATURE, TMoN.SKYOAK_FEATURE },
-								new FeatureConfig[] { DefaultFeatureConfig.DEFAULT, DefaultFeatureConfig.DEFAULT },
+								new FeatureConfig[] { FeatureConfig.DEFAULT, FeatureConfig.DEFAULT },
 								new float[] { 0.05f, 0.05f },
 								TMoN.SKY_PLUM_FEATURE,
-								DefaultFeatureConfig.DEFAULT),
+								FeatureConfig.DEFAULT),
 						Decorator.COUNT_EXTRA_HEIGHTMAP,
 						new CountExtraChanceDecoratorConfig(7, 0.1F, 1)));
 
@@ -146,10 +121,10 @@ public class SkyFeatures {
 	protected static RandomFeatureConfig createBushesConfig() {
 		return new RandomFeatureConfig(
 				new Feature[] { TMoN.SKY_PLUM_BUSH_FEATURE },
-				new FeatureConfig[] { DefaultFeatureConfig.DEFAULT },
+				new FeatureConfig[] { FeatureConfig.DEFAULT },
 				new float[] { 0.25f },
 				TMoN.SKYOAK_BUSH_FEATURE,
-				DefaultFeatureConfig.DEFAULT);
+				FeatureConfig.DEFAULT);
 	}
 
 	public static void addLakes(TMoNBiome biome) {

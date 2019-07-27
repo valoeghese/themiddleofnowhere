@@ -60,8 +60,9 @@ public class SkyDimension extends Dimension {
 		return null;
 	}
 
+	@Override
 	public float getSkyAngle(long long_1, float float_1) {
-		double double_1 = MathHelper.fractionalPart((double) long_1 / 24000.0D - 0.25D);
+		double double_1 = MathHelper.fractionalPart(long_1 / 24000.0D - 0.25D);
 		double double_2 = 0.5D - Math.cos(double_1 * 3.141592653589793D) / 2.0D;
 		return (float) (double_1 * 2.0D + double_2) / 3.0F;
 	}
@@ -81,17 +82,18 @@ public class SkyDimension extends Dimension {
 		return new BlockPos(0, 100, 0);
 	}
 
+	@Override
 	@Environment(EnvType.CLIENT)
 	public Vec3d getFogColor(float x, float y) {
 		float float_3 = MathHelper.cos(x * 6.2831855F) * 2.0F + 0.5F;
 		float_3 = MathHelper.clamp(float_3, 0.0F, 1.0F);
-		float float_4 = 0.7529412F;
-		float float_5 = 0.84705883F;
-		float float_6 = 1.0F;
-		float_4 *= float_3 * 0.94F + 0.06F;
-		float_5 *= float_3 * 0.94F + 0.06F;
-		float_6 *= float_3 * 0.91F + 0.09F;
-		return new Vec3d((double) float_4, (double) float_5, (double) float_6);
+		float r = 0.7529412F;
+		float g = 0.84705883F;
+		float b = 1.0F;
+		r *= float_3 * 0.94F + 0.06F;
+		g *= float_3 * 0.94F + 0.06F;
+		b *= float_3 * 0.91F + 0.09F;
+		return new Vec3d(r, g, b);
 	}
 
 	@Override

@@ -11,7 +11,6 @@ import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
@@ -38,6 +37,7 @@ public class SkyOakBucketItem extends Item {
 		this.fluid = fluid;
 	}
 
+	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 		ItemStack stack = player.getStackInHand(hand);
 		HitResult hitResult = rayTrace(world, player, this.fluid == Fluids.EMPTY ? RayTraceContext.FluidHandling.SOURCE_ONLY : RayTraceContext.FluidHandling.NONE);
@@ -132,7 +132,7 @@ public class SkyOakBucketItem extends Item {
 					world.playSound(player, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (world.random.nextFloat() - world.random.nextFloat()) * 0.8F);
 
 					for (int i = 0; i < 8; ++i) {
-						world.addParticle(ParticleTypes.LARGE_SMOKE, (double) x + Math.random(), (double) y + Math.random(), (double) z + Math.random(), 0.0D, 0.0D, 0.0D);
+						world.addParticle(ParticleTypes.LARGE_SMOKE, x + Math.random(), y + Math.random(), z + Math.random(), 0.0D, 0.0D, 0.0D);
 					}
 				} else if (state.getBlock() instanceof FluidFillable && this.fluid == Fluids.WATER) {
 					if (((FluidFillable) state.getBlock()).tryFillWithFluid(world, pos, state, ((BaseFluid) this.fluid).getStill(false))) {
