@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:sky_oak_stick"
+    },
+    "X": {
+      "item": "tmon:sky_oak_planks"
+    }
+  },
+  "result": {
+    "item": "tmon:sky_oak_sword"
+  }
+}

@@ -21,7 +21,7 @@ public abstract class MixinCraftingTableContainer {
 
 	@Inject(at = @At("HEAD"), method = "canUse", cancellable = true)
 	public void canUse(PlayerEntity player, CallbackInfoReturnable<Boolean> ci) {
-		if (canUse2(this.context, player, TMoN.SKYOAK_CRAFTING_TABLE)) {
+		if (canUse2(this.context, player, TMoN.SKY_OAK_CRAFTING_TABLE)) {
 			ci.setReturnValue(true);
 			ci.cancel();
 		}

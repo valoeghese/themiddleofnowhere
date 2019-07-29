@@ -91,7 +91,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "tmon:skyoak_stick"
+          "name": "tmon:sky_oak_stick"
         }
       ],
       "conditions": [

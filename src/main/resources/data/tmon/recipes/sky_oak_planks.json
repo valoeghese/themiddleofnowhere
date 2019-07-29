@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "tmon:sky_oak_log"
+    }
+  ],
+  "result": {
+    "item": "tmon:sky_oak_planks",
+    "count": 4
+  }
+}

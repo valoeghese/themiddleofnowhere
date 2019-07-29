@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:sky_plugin_stick"
+    },
+    "W": {
+      "item": "tmon:sky_plugin_planks"
+    }
+  },
+  "result": {
+    "item": "tmon:sky_plugin_fence_gate"
+  }
+}

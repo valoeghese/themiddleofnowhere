@@ -21,7 +21,7 @@ import tmon.features.SkystoneOreFeatureConfig;
 public class TMoN {
 	public static ItemGroup ITEM_GROUP;
 
-	public static ToolMaterial SKYROOT_TOOL;
+	public static ToolMaterial SKY_OAK_TOOL;
 	public static ToolMaterial SKYSTONE_TOOL;
 	public static ToolMaterial CERUCLASE_TOOL;
 
@@ -55,8 +55,10 @@ public class TMoN {
 	public static Block SKY_PLUM_STAIRS;
 	public static Block SKY_PLUM_SLAB;
 	public static Block SKY_PLUM_SAPLING;
+	public static Block SKY_PLUM_FENCE;
+	public static Block SKY_PLUM_FENCE_GATE;
 
-	public static Block SKYOAK_CRAFTING_TABLE;
+	public static Block SKY_OAK_CRAFTING_TABLE;
 	public static Block ALTAR;
 
 	public static Block WHITE_FLOWERS;
@@ -64,14 +66,14 @@ public class TMoN {
 	
 	public static BlockEntityType<?> ALTAR_ENTITY;
 
-	public static Item SKYROOT_STICK;
+	public static Item SKY_WOOD_STICK;
 	public static Item CERUCLASE;
 	public static Item CELESTIAL_PEARL;
 	public static Item SKY_PLUM;
 
-	public static Item SKYOAK_SWORD;
-	public static Item SKYOAK_SHOVEL;
-	public static Item SKYOAK_PICKAXE;
+	public static Item SKY_OAK_SWORD;
+	public static Item SKY_OAK_SHOVEL;
+	public static Item SKY_OAK_PICKAXE;
 
 	public static Item SKYSTONE_SWORD;
 	public static Item SKYSTONE_SHOVEL;
@@ -85,7 +87,7 @@ public class TMoN {
 	public static Item CERUCLASE_AXE;
 	public static Item CERUCLASE_HOE;
 
-	public static Item SKYOAK_CROOK;
+	public static Item SKY_OAK_CROOK;
 	public static Item CELESTIAL_STAFF;
 
 	public static Item SKY_OAK_BUCKET;
@@ -101,9 +103,9 @@ public class TMoN {
 	public static TernarySurfaceConfig SKYGRASS_SURFACE_CONFIG;
 	public static TernarySurfaceConfig SKYSTONE_SURFACE_CONFIG;
 
-	public static Feature<DefaultFeatureConfig> SKYOAK_FEATURE;
-	public static Feature<DefaultFeatureConfig> SKYOAK_BUSH_FEATURE;
-	public static Feature<DefaultFeatureConfig> LARGE_SKYOAK_FEATURE;
+	public static Feature<DefaultFeatureConfig> SKY_OAK_FEATURE;
+	public static Feature<DefaultFeatureConfig> SKY_OAK_BUSH_FEATURE;
+	public static Feature<DefaultFeatureConfig> LARGE_SKY_OAK_FEATURE;
 
 	public static Feature<DefaultFeatureConfig> SKY_PLUM_FEATURE;
 	public static Feature<DefaultFeatureConfig> SKY_PLUM_BUSH_FEATURE;

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "tmon:block/sky_oak_sapling"
+    }
+}

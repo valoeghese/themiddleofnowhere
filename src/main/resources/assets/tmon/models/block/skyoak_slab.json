@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "tmon:block/skyoak_planks",
-    "top": "tmon:block/skyoak_planks",
-    "side": "tmon:block/skyoak_planks"
-  }
-}

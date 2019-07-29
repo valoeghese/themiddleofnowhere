@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tmon:skyoak_fence"
+    "tmon:sky_oak_fence",
+    "tmon:sky_plum_fence"
   ]
 }
