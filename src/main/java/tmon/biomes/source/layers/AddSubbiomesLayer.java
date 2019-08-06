@@ -18,7 +18,7 @@ public enum AddSubbiomesLayer implements IdentitySamplingLayer {
 			if (random.nextInt(8) == 0) {
 				return PLUM_GROOVE;
 			}
-			if (random.nextInt(14) == 0) {
+			if (random.nextInt(8) == 0) {
 				return LAKES_ISLANDS;
 			}
 			return value;

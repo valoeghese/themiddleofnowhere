@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#C"
+  ],
+  "key": {
+    "#": {
+      "item": "tmon:chiseled_skystone"
+    },
+    "C": {
+      "item": "tmon:ceruclase"
+    }
+  },
+  "result": {
+    "item": "tmon:skystone_ceruclase_column"
+  }
+}

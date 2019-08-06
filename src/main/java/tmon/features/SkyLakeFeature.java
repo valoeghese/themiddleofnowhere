@@ -107,7 +107,8 @@ public class SkyLakeFeature extends Feature<LakeFeatureConfig> {
 				for (int dy = 4; dy < 8; ++dy) {
 					if (bitset[(dx * 16 + dz) * 8 + dy]) {
 						BlockPos pos = start.add(dx, dy - 1, dz);
-						if (Block.isNaturalDirt(world.getBlockState(pos).getBlock())
+						Block block = world.getBlockState(pos).getBlock();
+						if ((Block.isNaturalDirt(block) || block == TMoN.SKY_DIRT)
 								&& world.getLightLevel(LightType.SKY, start.add(dx, dy, dz)) > 0) {
 							world.setBlockState(pos, TMoN.SKY_GRASS.getDefaultState(), 2);
 						}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "particle": "tmon:block/sky_flower",
+        "cross": "tmon:block/sky_flower"
+    }
+}
