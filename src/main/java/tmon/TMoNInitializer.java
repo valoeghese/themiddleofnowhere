@@ -1,6 +1,13 @@
 package tmon;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import com.google.common.collect.Sets;
+import com.google.gson.Gson;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -68,6 +75,7 @@ import tmon.blocks.SkylandsPlantBlock;
 import tmon.blocks.SkylandsSaplingBlock;
 import tmon.blocks.WhiteFlowersBlock;
 import tmon.blocks.entity.AltarBlockEntity;
+import tmon.config.TMoNConfig;
 import tmon.decorators.CeruclaseOreVeinDecorator;
 import tmon.decorators.SkylandLoweringsDecorator;
 import tmon.decorators.SkylandLoweringsDecoratorConfig;
@@ -91,6 +99,12 @@ import tmon.surfacebuilders.SkylandsSurfaceBuilder;
 
 @SuppressWarnings("deprecation")
 public class TMoNInitializer implements ModInitializer {
+	public static TMoNConfig config;
+	
+	static {
+		loadConfig();
+	}
+	
 	@Override
 	public void onInitialize() {
 		TMoN.BLOCKS_GROUP = FabricItemGroupBuilder.build(new Identifier("tmon", "blocks"), () -> new ItemStack(TMoN.SKY_GRASS));
@@ -280,6 +294,33 @@ public class TMoNInitializer implements ModInitializer {
 		}));
 
 		TMoN.SKY_BIOME_SOURCE_TYPE = register("sky", new BiomeSourceType<>(SkyBiomeSource::new, SkyBiomeSourceConfig::new));
+	}
+
+	private static void loadConfig() {
+		Gson gson = new Gson();
+		File loc = new File("./config/themiddleofnowhere.json");
+		try {
+			if (loc.createNewFile()) {
+				// Create Config
+				try (FileWriter writer = new FileWriter(loc)) {
+					writer.write("{\n" + 
+							"  \"biomeSize\": 4\n" +
+							"}");
+				} catch (FileNotFoundException e) {
+					throw new RuntimeException("[TMoN] Unhandled FileNotFoundException in generating config!");
+				}
+			}
+			
+			// Read Config
+			try (FileReader reader = new FileReader(loc)) {
+				config = gson.fromJson(reader, TMoNConfig.class);
+			} catch (FileNotFoundException e) {
+				throw new RuntimeException("[TMoN] Unhandled FileNotFoundException in reading config!");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException("[TMoN] Unhandled IOException in config handling!");
+		}
 	}
 
 	protected void setDefaultSettings(BiomeBuilder builder) {

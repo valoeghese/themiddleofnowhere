@@ -13,6 +13,7 @@ import net.minecraft.world.biome.layer.LayerSampleContext;
 import net.minecraft.world.biome.layer.LayerSampler;
 import net.minecraft.world.biome.layer.ScaleLayer;
 import net.minecraft.world.level.LevelGeneratorType;
+import tmon.TMoNInitializer;
 import tmon.biomes.source.layers.AddSubbiomesLayer;
 import tmon.biomes.source.layers.AssignSkyBiomesLayer;
 import tmon.biomes.source.layers.SkyInitLayer;
@@ -25,10 +26,10 @@ public class SkyBiomeLayers {
 		ImmutableList<LayerFactory<CachingLayerSampler>> layers = build(type, config, layerSeed -> {
 			return new CachingLayerContext(25, seed, layerSeed);
 		});
-		BiomeLayerSampler layer1 = new BiomeLayerSampler(layers.get(0));
-		BiomeLayerSampler layer2 = new BiomeLayerSampler(layers.get(1));
+		BiomeLayerSampler noiseLayer = new BiomeLayerSampler(layers.get(0));
+		BiomeLayerSampler biomeLayer = new BiomeLayerSampler(layers.get(1));
 		BiomeLayerSampler layer3 = new BiomeLayerSampler(layers.get(2));
-		return new BiomeLayerSampler[] { layer1, layer2, layer3 };
+		return new BiomeLayerSampler[] { noiseLayer, biomeLayer, layer3 };
 	}
 
 	public static <T extends LayerSampler, C extends LayerSampleContext<T>> ImmutableList<LayerFactory<T>> build(
@@ -50,8 +51,10 @@ public class SkyBiomeLayers {
 		biomes = AddSubbiomesLayer.INSTANCE.create(context.apply(2L), biomes);
 
 		biomes = ScaleLayer.FUZZY.create(context.apply(11), biomes);
+		
+		int biomeSize = TMoNInitializer.config.biomeSize; // default is 4
 
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < biomeSize; i++) {
 			biomes = ScaleLayer.NORMAL.create(context.apply(20 + i), biomes);
 		}
 
