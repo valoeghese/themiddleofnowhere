@@ -298,6 +298,10 @@ public class TMoNInitializer implements ModInitializer {
 
 	private static void loadConfig() {
 		Gson gson = new Gson();
+		
+		// first make sure config folder exists
+		new File("./config/").mkdir();
+		
 		File loc = new File("./config/themiddleofnowhere.json");
 		try {
 			if (loc.createNewFile()) {
